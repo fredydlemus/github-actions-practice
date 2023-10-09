@@ -30,6 +30,7 @@ on:
         type: string
 jobs:
   hola-mundo-manual:
+    if: ${{github.event_name == 'workflow_dispatch'}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
